@@ -4225,7 +4225,9 @@ readers do not read off random characters that represent icons */
   position: relative;
   z-index: 111;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px; }
   .app-content .app-content__inner {
     position: relative;
     padding: .7em;
@@ -4301,7 +4303,7 @@ readers do not read off random characters that represent icons */
   border-radius: 15.5px; }
   .rupor-section__title .rupor-section__title--content {
     position: relative;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.211));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.4211));
     width: 100%;
     height: 100%;
     border-radius: inherit; }
@@ -4323,6 +4325,10 @@ readers do not read off random characters that represent icons */
         font-weight: 400;
         color: #fff;
         text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.59); }
+
+@media (max-width: 768px) {
+  .rupor-section__title {
+    height: 220px; } }
 
 .rupor-feed__item {
   display: flex;
@@ -4347,7 +4353,7 @@ readers do not read off random characters that represent icons */
     background-size: cover;
     border-radius: 7px;
     box-shadow: -2px -2px 15px 1px rgba(0, 0, 0, 0.02), 4px 3px 20px rgba(0, 0, 0, 0.05);
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     overflow: hidden;
     cursor: pointer; }
@@ -4362,6 +4368,77 @@ readers do not read off random characters that represent icons */
         padding: .1em .5em;
         height: 147px;
         overflow: hidden; }
+
+.rupor-login {
+  background-color: #000933;
+  width: 100%;
+  height: 100%; }
+  .rupor-login .login-logo {
+    padding: 3.5em; }
+    .rupor-login .login-logo .login-logo__inner .logo {
+      display: block;
+      background-image: url("../img/logo/logo_negative.png");
+      width: 210px;
+      height: 75.7675755345px;
+      background-repeat: no-repeat;
+      background-size: contain; }
+  .rupor-login .login-form {
+    width: 320px;
+    margin: auto; }
+    .rupor-login .login-form .login-form__fieldset {
+      padding: .1em; }
+      .rupor-login .login-form .login-form__fieldset .login-form__field {
+        padding-top: 5.5px;
+        padding-bottom: 5.7px; }
+        .rupor-login .login-form .login-form__fieldset .login-form__field:last-child {
+          margin-top: 25px; }
+        .rupor-login .login-form .login-form__fieldset .login-form__field label {
+          display: block;
+          color: #f9fafd; }
+        .rupor-login .login-form .login-form__fieldset .login-form__field input[type='email'],
+        .rupor-login .login-form .login-form__fieldset .login-form__field input[type='text'],
+        .rupor-login .login-form .login-form__fieldset .login-form__field input[type='password'] {
+          display: block;
+          width: 100%;
+          border: none;
+          background-color: #f9fafd;
+          padding: 15.5px;
+          border-radius: 25px; }
+      .rupor-login .login-form .login-form__fieldset .btn-login {
+        display: block;
+        width: 165px;
+        margin: 0 auto;
+        padding: 10px;
+        border-left: 5px solid #fd1c30;
+        border-right: 5.5px solid #fd1c30;
+        border-top: 0;
+        border-bottom: 0;
+        cursor: pointer;
+        background: #f1f8ff;
+        font-weight: 900;
+        font-size: 1.5em;
+        color: #000933; }
+        .rupor-login .login-form .login-form__fieldset .btn-login:hover {
+          border-left: 2px solid #fd1c30;
+          border-right: 7px solid #fd1c30; }
+    .rupor-login .login-form .social-login {
+      margin: 0 auto;
+      text-align: center; }
+      .rupor-login .login-form .social-login .btn-social {
+        display: inline-block;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 26px;
+        color: #7983b3; }
+        .rupor-login .login-form .social-login .btn-social:hover {
+          color: #eef1ff; }
+  @media (max-width: 768px) {
+    .rupor-login .login-logo {
+      padding: 1em; }
+      .rupor-login .login-logo .login-logo__inner .logo {
+        margin: 0 auto; }
+    .rupor-login .login-form {
+      width: 100%; } }
 
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
@@ -11329,29 +11406,38 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 999; }
   .header .header-inner {
     padding-top: 3.3em; }
-  .header .logo {
-    position: relative;
-    z-index: 222;
-    margin-bottom: -3px;
-    background-image: url(../img/logo/logo_default.png);
-    width: 207px;
-    height: 69px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: bottom; }
-  .header .account {
-    width: 220px;
-    float: right; }
-    .header .account .account-info .account-info__login {
-      display: block;
-      text-align: right;
-      font: .95em 'Raleway';
-      font-weight: 700;
-      color: #00104a;
-      border: none;
-      text-decoration: none; }
-    .header .account .account-info .account-info:hover {
-      color: #00328f; }
+  @media (max-width: 768px) {
+    .header .header-inner {
+      padding-top: .3em; } }
+  .header .header-top {
+    display: flex;
+    flex-direction: row; }
+    .header .header-top .header-top__item {
+      align-self: center; }
+      .header .header-top .header-top__item:last-child {
+        align-content: flex-end;
+        width: 70%; }
+      .header .header-top .header-top__item .logo {
+        display: block;
+        position: relative;
+        z-index: 222;
+        margin-bottom: -3px;
+        background-image: url(../img/logo/logo_default.png);
+        width: 207px;
+        height: 69px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: bottom; }
+      .header .header-top .header-top__item .account .account-info .account-info__login {
+        display: block;
+        text-align: right;
+        font: .95em 'Raleway';
+        font-weight: 700;
+        color: #00104a;
+        border: none;
+        text-decoration: none; }
+      .header .header-top .header-top__item .account .account-info .account-info:hover {
+        color: #00328f; }
   .header .navigation {
     background: #00104a;
     border-top: 3px solid #f02e3e;
@@ -11382,6 +11468,28 @@ a.text-dark:hover, a.text-dark:focus {
     .header .navigation .navigation-menu__inner:hover {
       color: #d6ddee;
       border: none; }
+    .header .navigation .navigation-toggle {
+      display: none; }
+    @media screen and (max-width: 768px) {
+      .header .navigation .navigation-menu {
+        display: none;
+        flex-direction: column; }
+        .header .navigation .navigation-menu.toggle {
+          display: flex; }
+      .header .navigation .navigation-menu__item {
+        display: block; }
+      .header .navigation .navigation-toggle {
+        display: block; }
+        .header .navigation .navigation-toggle .toggle-button {
+          float: right;
+          font-size: 1.59em;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: #fff; } }
+  @media screen and (max-width: 768px) {
+    .header .navigation {
+      text-align: left;
+      text-align-last: left; } }
 
 .app-leftmenu {
   width: 95%;
@@ -11546,6 +11654,9 @@ a.text-dark:hover, a.text-dark:focus {
     flex-wrap: wrap;
     margin: 2em auto;
     width: 82%; }
+  @media (max-width: 768px) {
+    .rupor-cards .rupor-cards__section {
+      width: 100%; } }
   .rupor-cards .rupor-cards__inner {
     display: inherit;
     margin: auto;
@@ -11810,6 +11921,9 @@ a.text-dark:hover, a.text-dark:focus {
         border-top-right-radius: 15px;
         background-repeat: no-repeat;
         background-size: cover; }
+      @media (max-width: 768px) {
+        .rupor-cards .rupor-card.rupor-card__article .rupor-card__article--preview {
+          height: 200px; } }
       .rupor-cards .rupor-card.rupor-card__article .title {
         font: 19.5px 'Raleway';
         font-weight: 800;
@@ -11981,24 +12095,47 @@ body {
     background-color: transparent;
     text-decoration: none;
     border: none; }
+  body .color-white {
+    color: #f1f8ff; }
+  @media screen and (max-width: 768px) {
+    body .app-container {
+      display: block;
+      width: 100%; }
+    body .row {
+      padding: 0;
+      margin: 0; }
+    body .rupor-latest_news {
+      display: none; }
+    body .app-leftmenu {
+      display: none; }
+    body .col-lg-8 {
+      margin: 0 auto; }
+    body .app-content {
+      margin: 0 auto; }
+    body .rupor-section__title {
+      width: 100%; } }
   @media (max-width: 1440px) {
     body .col-lg-8 {
       padding-right: 0;
-      padding-left: 0;
-      margin-left: 0;
-      margin-right: 0; } }
+      padding-left: 0; } }
   @media (min-width: 1200px) {
     body .app-container {
       width: 1245px;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px; } }
   @media (min-width: 1400px) {
     body .app-container {
       width: 1360px;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px; } }
   @media (min-width: 1600px) {
     body .app-container {
       width: 1600px;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 
 /*# sourceMappingURL=style.css.map*/

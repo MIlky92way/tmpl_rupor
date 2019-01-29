@@ -17,15 +17,15 @@
         <header class="header">
     <div class="app-container header-inner">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="logo">
-                    </div>
+            <div class="header-top">
+                <div class="header-top__item">
+                    <a class="logo" href="/">
+                    </a>
                 </div>
-                <div class="col-md-10">
+                <div class="header-top__item">
                     <div class="account">
                         <div class="account-info">
-                            <a href="#" class="account-info__login">Вход </a>
+                            <a href="/login.html" class="account-info__login">Вход </a>
                         </div>
                     </div>
                 </div>
@@ -35,14 +35,19 @@
     <nav class="navigation">
         <div class="app-container">
             <div class="container-fluid">
-                <ul class="col-lg-8 col-md-8 navigation-menu">
+                <div class="navigation-toggle">
+                    <a href="javascript:void(0);" class="toggle-button" id="toggle_button">
+                        <i class="fa fa-bars" aria-hidden="true" id="toggle_icon"></i>
+                    </a>
+                </div>
+                <ul class="col-lg-8 col-md-12 col-xs-12 navigation-menu" id="navigation_menu">
                     <li class="navigation-menu__item">
                         <a class="navigation-menu__inner" href="section.html">
                             горячие новости
                         </a>
                     </li>
                     <li class="navigation-menu__item">
-                        <a class="navigation-menu__inner" href="section.html" >
+                        <a class="navigation-menu__inner" href="section.html">
                             проишествия
                         </a>
                     </li>
@@ -72,12 +77,13 @@
     </nav>
 </header>
 
+
         <div class="app-container">
             <div class="container-fluid">
                 <div class="row">
                     <aside class="col-md-2 app-leftmenu">
     <ul class="leftmenu">
-        <li class="leftmenu-item"><i class="fas fa-ad"></i></li>
+        <li class="leftmenu-item"><i class="fa fa-newspaper-o" aria-hidden="true"></i></li>
         <li class="leftmenu-item">
             <a href="#" class="leftmenu-item__link info">
                 Рассказать о проблеме!
