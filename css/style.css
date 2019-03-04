@@ -4227,7 +4227,8 @@ readers do not read off random characters that represent icons */
   width: 100%;
   margin: 0 auto;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  padding-bottom: 200px; }
   .app-content .app-content__inner {
     position: relative;
     padding: .7em;
@@ -4547,7 +4548,7 @@ readers do not read off random characters that represent icons */
       margin: 0 auto;
       padding: .2em; }
       .rupor-article .rupor-article__inner .rupor-article__footer .rupor-article__footer--user {
-        width: 40%;
+        width: 45%;
         height: 210px;
         margin: 60px auto;
         border-radius: 15px;
@@ -4597,17 +4598,168 @@ readers do not read off random characters that represent icons */
             font-size: 25px;
             width: 50px; }
       .rupor-article .rupor-article__inner .rupor-article__footer .rupor-article__footer--info {
-        padding: .7em;
         background: #edf7fd;
         border-radius: 10px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         color: #00104a; }
+      @media (max-width: 768px) {
+        .rupor-article .rupor-article__inner .rupor-article__footer .rupor-article__footer--user {
+          width: 100%; }
+        .rupor-article .rupor-article__inner .rupor-article__footer .rupor-article__footer--info {
+          width: 100%;
+          padding-top: .25em;
+          padding-bottom: .25em; } }
+      @media (min-width: 1200px) {
+        .rupor-article .rupor-article__inner .rupor-article__footer .rupor-article__footer--info {
+          padding: .4em; } }
+
+.rupor-comments {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: -2px -2px 15px 1px rgba(0, 0, 0, 0.01), 4px 3px 20px rgba(0, 0, 0, 0.02);
+  margin-bottom: 2em; }
+  .rupor-comments .rupor-comments__title {
+    padding: .7em;
+    font-size: 18px;
+    color: #bbbbbb;
+    font-weight: 700; }
+  .rupor-comments .rupor-comments__inner {
+    width: 95%;
+    height: 455px;
+    overflow-y: scroll;
+    margin: 0 auto; }
+    .rupor-comments .rupor-comments__inner .date-devider {
+      position: sticky;
+      top: 0;
+      padding: .1em;
+      margin-bottom: 5px;
+      background-color: #edf7fd;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 700;
+      color: #9cbed3; }
+    .rupor-comments .rupor-comments__inner .comment-replies {
+      margin-left: 62px; }
+    .rupor-comments .rupor-comments__inner .comment {
+      display: flex;
+      flex-direction: row;
+      width: 85%;
+      padding: .55em;
+      margin: 0 auto; }
+      .rupor-comments .rupor-comments__inner .comment .comment-image {
+        margin-right: 15px;
+        cursor: pointer; }
+        .rupor-comments .rupor-comments__inner .comment .comment-image .image {
+          display: block;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%; }
+      .rupor-comments .rupor-comments__inner .comment .comment-content .title {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        font-weight: 700;
+        align-items: center; }
+        .rupor-comments .rupor-comments__inner .comment .comment-content .title .username {
+          margin-right: 5px;
+          text-decoration: none;
+          color: #495881; }
+        .rupor-comments .rupor-comments__inner .comment .comment-content .title .date {
+          font-size: 12px;
+          color: #d6d6d6; }
+      .rupor-comments .rupor-comments__inner .comment .comment-content .user-comment {
+        text-align: justify; }
+      .rupor-comments .rupor-comments__inner .comment .comment-content .action {
+        margin-top: 5px;
+        justify-content: flex-end; }
+        .rupor-comments .rupor-comments__inner .comment .comment-content .action .reply {
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 13.5px;
+          color: #b1b1b1; }
+          .rupor-comments .rupor-comments__inner .comment .comment-content .action .reply:hover {
+            color: #688494; }
+  .rupor-comments .rupor-comments__footer {
+    background-color: #fbfcfe;
+    border-top: 1px solid #eaedf3; }
+    .rupor-comments .rupor-comments__footer .comment-post {
+      width: 600px;
+      padding: .5em;
+      margin: 0 auto; }
+      .rupor-comments .rupor-comments__footer .comment-post .comment-post__item {
+        display: inline-block; }
+        .rupor-comments .rupor-comments__footer .comment-post .comment-post__item:not(:last-child) {
+          margin-right: 10px; }
+      .rupor-comments .rupor-comments__footer .comment-post .editable-comment {
+        display: block;
+        width: 470px;
+        margin: 0 auto;
+        padding: .2em;
+        border-radius: 10px;
+        border: 1px solid #eaedf3; }
+      .rupor-comments .rupor-comments__footer .comment-post .commentator {
+        display: block;
+        text-decoration: none; }
+        .rupor-comments .rupor-comments__footer .comment-post .commentator .image {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%; }
+
+.btn-rupor {
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .btn-rupor.btn-rupor__blackblue {
+    color: #1a3094; }
+    .btn-rupor.btn-rupor__blackblue:hover {
+      color: #5673f3; }
 
 .bottom-article {
   margin-top: 30px;
   margin-bottom: 30px; }
+
+@media (max-width: 455px) {
+  .rupor-comments {
+    width: 100%; }
+    .rupor-comments .rupor-comments__inner {
+      width: 90%; }
+      .rupor-comments .rupor-comments__inner .comment {
+        width: 100%; }
+    .rupor-comments .rupor-comments__footer .comment-post {
+      width: 100%; }
+      .rupor-comments .rupor-comments__footer .comment-post .commentator {
+        display: none; }
+      .rupor-comments .rupor-comments__footer .comment-post .editable-comment {
+        width: 280px; } }
+
+@media (min-width: 768px) {
+  .rupor-comments {
+    width: 100%; }
+    .rupor-comments .rupor-comments__inner {
+      width: 90%; }
+      .rupor-comments .rupor-comments__inner .comment {
+        width: 100%; }
+    .rupor-comments .rupor-comments__footer .comment-post {
+      width: 430px; }
+      .rupor-comments .rupor-comments__footer .comment-post .editable-comment {
+        width: 320px; } }
+
+@media (min-width: 1024px) {
+  .rupor-comments {
+    width: 100%; }
+    .rupor-comments .rupor-comments__inner {
+      width: 90%; }
+      .rupor-comments .rupor-comments__inner .comment {
+        width: 100%; }
+    .rupor-comments .rupor-comments__footer .comment-post {
+      width: 600px; }
+      .rupor-comments .rupor-comments__footer .comment-post .editable-comment {
+        width: 450px; } }
 
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
@@ -11863,12 +12015,12 @@ a.text-dark:hover, a.text-dark:focus {
       .rupor-cards .rupor-card .date-post .date-article {
         display: inline-block; }
     .rupor-cards .rupor-card.rupor-card__vertical {
-      width: 225px;
-      height: 310px;
+      width: 200px;
+      height: 272px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      margin: 12.2px; }
+      margin: 10.2px; }
       .rupor-cards .rupor-card.rupor-card__vertical .rupor-card__vertical--content {
         position: relative;
         display: block;
@@ -11898,7 +12050,9 @@ a.text-dark:hover, a.text-dark:focus {
       margin: 15px auto 57px auto;
       height: 220px; }
       .rupor-cards .rupor-card.rupor-card__horizontal:hover {
-        transform: scale(1.02732); }
+        transform: scale(0.4);
+        transform: translateY(-2px);
+        box-shadow: 7px 15px 3rem 0px rgba(0, 16, 95, 0.096); }
       .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--preview {
         display: inline-block;
         vertical-align: middle;
@@ -11911,14 +12065,15 @@ a.text-dark:hover, a.text-dark:focus {
           background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.43));
           width: 100%;
           height: 100%; }
-        .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--preview.tags {
+        .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--preview .tags {
           width: 100%;
           display: flex;
           flex-direction: column;
-          align-content: center; }
-          .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--preview.tags > a.rupor-tag:last-child {
+          align-content: center;
+          padding: .4em; }
+          .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--preview .tags > a.rupor-tag:last-child {
             padding: 0 0 1.5em 2.2em; }
-          .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--preview.tags > a.rupor-tag:first-child {
+          .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--preview .tags > a.rupor-tag:first-child {
             padding: 1.5em 0 1.5em 2.2em; }
       .rupor-cards .rupor-card.rupor-card__horizontal .rupor-card__horizontal--content {
         display: inline-block;
@@ -11992,14 +12147,15 @@ a.text-dark:hover, a.text-dark:focus {
           background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.43));
           width: 100%;
           height: 100%; }
-        .rupor-cards .rupor-card.rupor-card__middle .rupor-card__middle--preview.tags {
+        .rupor-cards .rupor-card.rupor-card__middle .rupor-card__middle--preview .tags {
           width: 100%;
           display: flex;
           flex-direction: column;
-          align-content: center; }
-          .rupor-cards .rupor-card.rupor-card__middle .rupor-card__middle--preview.tags > a.rupor-tag:last-child {
+          align-content: center;
+          padding: .4em; }
+          .rupor-cards .rupor-card.rupor-card__middle .rupor-card__middle--preview .tags > a.rupor-tag:last-child {
             padding: 0 0 0 2.2em; }
-          .rupor-cards .rupor-card.rupor-card__middle .rupor-card__middle--preview.tags > a.rupor-tag:first-child {
+          .rupor-cards .rupor-card.rupor-card__middle .rupor-card__middle--preview .tags > a.rupor-tag:first-child {
             padding: 0.7em 0 0 2.2em; }
         .rupor-cards .rupor-card.rupor-card__middle .rupor-card__middle--preview .user-block {
           width: 100%;
@@ -12165,8 +12321,8 @@ a.text-dark:hover, a.text-dark:focus {
         width: 62.33333%; } }
     @media (min-width: 1600px) {
       .rupor-cards .rupor-card.rupor-card__vertical {
-        width: 210px;
-        height: 310px;
+        width: 200px;
+        height: 275px;
         margin: auto; }
       .rupor-cards .rupor-card.rupor-card__horizontal {
         width: 87.77777%; }
