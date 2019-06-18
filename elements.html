@@ -8,7 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./fonts/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
     <title>Index</title>
 </head>
 
@@ -42,33 +44,23 @@
                 </div>
                 <ul class="col-lg-8 col-md-12 col-xs-12 navigation-menu" id="navigation_menu">
                     <li class="navigation-menu__item">
-                        <a class="navigation-menu__inner" href="section.html">
-                            горячие новости
+                        <a class="navigation-menu__inner" href="">
+                            <i class="icon feed"></i> лента
                         </a>
                     </li>
                     <li class="navigation-menu__item">
-                        <a class="navigation-menu__inner" href="section.html">
-                            проишествия
+                        <a class="navigation-menu__inner" href="">
+                            <i class="icon hot"></i> горячее
                         </a>
                     </li>
                     <li class="navigation-menu__item">
-                        <a class="navigation-menu__inner active" href="section.html">
-                            общество
+                        <a class="navigation-menu__inner" href="">
+                            <i class="icon info"></i> Рубрикатор
                         </a>
                     </li>
                     <li class="navigation-menu__item">
-                        <a class="navigation-menu__inner" href="section.html">
-                            политика
-                        </a>
-                    </li>
-                    <li class="navigation-menu__item">
-                        <a class="navigation-menu__inner" href="section.html">
-                            россия
-                        </a>
-                    </li>
-                    <li class="navigation-menu__item">
-                        <a class="navigation-menu__inner" href="section.html">
-                            спорт
+                        <a class="navigation-menu__inner" href="">
+                            <i class="icon top-users"></i> Топ авторов
                         </a>
                     </li>
                 </ul>
@@ -76,7 +68,6 @@
         </div>
     </nav>
 </header>
-
 
         <div class="app-container">
             <div class="container-fluid">
@@ -118,17 +109,22 @@
 </aside>
                     <div class="col-lg-7 col-md-7 col-xs-12 app-content">
     <div class="app-content__inner">
-        <h4>заголовки</h4>
+        <h4>Title</h4>
         <div class="">
             <div class="title-page">
 
             </div>
             <h1 class="title-fire">Горячие новости</h1>
             <h2 class="title-info">Лента</h2>
-            <h3 class="title-latest">Последние</h3>
+            <h3 class="title-latest">Последниe</h3>
 
+            <h4>Icons</h4>
+            <div class=""><i class="icon feed"></i> feed line</div>
+            <div class=""><i class="icon top-users"></i> Top users</div>
+            <div class=""><i class="icon hot"></i> latest</div>
+            <div class=""><i class="icon info"></i> info</div>
         </div>
-        <h4>Фильтр</h4>
+        <h4>Fitler buttons</h4>
         <div class="filter">
             <span class="filter-item">
                 <i class="filter-item filter-view__icon"></i>
@@ -140,8 +136,26 @@
                 <i class="filter-item filter-icon__icon"></i>
             </span>
         </div>
-        <h4>Теги</h4>
+        <h4>Bottons</h4>
+        <div class="">
+            <button class="app-btn liked">
+                <i class="fa fa-heart"></i>
+            </button>
+            <button class="app-btn app-btn__default">
+                default
+            </button>
+            <button class="app-btn app-btn__blackblue">
+                black blue
+            </button>
+            <button class="app-btn app-btn__red">
+                red
+            </button>
 
+            <button class="app-btn like">
+                <i class="far fa-heart"></i>
+            </button>
+        </div>
+        <h4>Tags</h4>
         <div>
             <a href="#" class="rupor-tag">
                 <span class="rupor-tag__section">
@@ -343,10 +357,73 @@
                 </div>
             </div>
         </div>
+
+        <h4>Action cards</h4>
+        <!-- <div class="">
+            <h5>Slider cards</h5>
+            <div class="slider-action">
+
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+            </div>
+        </div> -->
+        <div>
+            <h5>Card</h5>
+            <div class="row">
+                <div class="col-md-3">
+                        <div class="action-card" style="background-image: url('other/img_1.jpg')">
+                            <form action="" method="get" class="overlay">
+                                <div class="tag">
+                                   <span> Пост советское простарнство</span>
+                                   <div class="">
+                                       <i class="fa fa-eye"></i> 298
+                                   </div>
+                                </div>
+                                <div class="action-card__action">
+                                    <button class="app-btn app-btn__subscribe">
+                                        <i class="fa fa-check-circle"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="action-card" style="background-image: url('other/img_1.jpg')">
+                            <form action="" method="get" class="overlay">
+                                <div class="tag">
+                                   <span> Пост советское простарнство</span>
+                                   <div class="">
+                                       <i class="fa fa-eye"></i> 298
+                                   </div>
+                                </div>
+                                <div class="action-card__action">
+                                    <button class="app-btn app-btn__unsubscribe">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>            
+        </div>
+        <h4>
+            Group lists
+        </h4>
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item active">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
     </div>
-
-
-</div>
                     <aside class="col-md-2 rupor-latest_news">
     <h3 class="title-latest">Последние</h3>
     <a class="rupor-latest_news__inner" style="background-image: url('other/img_5.jpg')" href="article.html">
@@ -380,6 +457,14 @@
         </div>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"
+    integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+    <script>
+        $(() => {
+            $(".slider-action").owlCarousel();
+        });
+    </script>
 </body>
 
 </html>
